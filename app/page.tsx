@@ -1,35 +1,132 @@
-import { ArrowRight, Code2, GraduationCap, Mail, Phone } from "lucide-react";
-
-const interests = ["Software Development", "Web Design", "Computer Networking", "Application Development"];
+const interests = [
+  "Technology and Programming",
+  "Website Development",
+  "Computer Networking",
+  "Database Management",
+  "System Development",
+];
 
 export default function Home() {
   return (
     <main>
       <nav className="navbar">
-        <a className="brand" href="#home"><span className="brand-mark">RR</span> Rachelle Raros<span className="dot">.</span></a>
-        <div className="nav-links">
-          <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <a className="logo" href="#home">J.</a>
+        <div className="navlinks">
+          {["Home", "About", "Education", "Projects", "Contact"].map((item) => (
+            <a key={item} href={"#" + item.toLowerCase()}>{item}</a>
+          ))}
         </div>
       </nav>
-      <section className="hero wrap" id="home">
-        <div>
-          <p className="eyebrow">INFORMATION TECHNOLOGY STUDENT</p>
-          <h1>Hello, I’m<br /><span>Rachelle Raros.</span></h1>
-          <h2>Building Skills Today, Creating Solutions Tomorrow.</h2>
-          <p className="muted">I’m a college student interested in programming, digital solutions, and learning how websites and systems are developed. I enjoy exploring technology and finding creative ways to solve problems.</p>
-          <a className="button" href="#projects">Explore my projects <ArrowRight size={17} /></a>
+
+      <section id="home" className="section hero">
+        <div className="heroText">
+          <p className="eyebrow">PROGRAMMER PROFILE</p>
+          <h1>Hi, I&apos;m <span>Jharyll.</span></h1>
+          <p className="intro">
+            Hi! I&apos;m a college student and an aspiring programmer who is passionate
+            about learning technology and improving my skills in programming. I enjoy
+            exploring new ideas, creating simple projects, and learning how technology
+            can solve everyday problems. I&apos;m still growing as a programmer, but I&apos;m
+            always willing to learn, practice, and improve.
+          </p>
+          <a className="button" href="#projects">View My Project</a>
         </div>
-        <div className="hero-art"><div className="circle"></div><div className="code-card"><Code2 size={28}/><p>const developer = &#123;</p><p className="indent">name: "Rachelle",</p><p className="indent">learning: true</p><p>&#125;;</p><div className="status">● Always learning, always growing</div></div><span className="hero-tag">Future Developer</span></div>
+
+        <div className="flowerScene" aria-label="CSS flowers illustration">
+          <div className="flower flowerOne"><i></i><i></i><i></i><i></i><b></b></div>
+          <div className="flower flowerTwo"><i></i><i></i><i></i><i></i><b></b></div>
+          <div className="stem stemOne"></div>
+          <div className="stem stemTwo"></div>
+          <div className="leaf leafOne"></div>
+          <div className="leaf leafTwo"></div>
+          <div className="ground"></div>
+        </div>
       </section>
-      <section className="band"><div className="wrap band-inner"><b>MY APPROACH</b><span>Stay curious. Keep practicing. Build with purpose.</span></div></section>
-      <section className="section wrap" id="about">
-        <p className="eyebrow">01 / ABOUT</p><h2 className="section-title">A little about <span>me</span></h2>
-        <div className="two-col"><article className="panel"><h3>Learning with purpose.</h3><p className="muted">I’m an aspiring programmer who enjoys exploring digital design, learning new concepts, and understanding how technology works. I’m improving my skills through college, practice, and personal projects, one step at a time.</p></article><article className="panel pale"><h3>What I’m interested in</h3>{interests.map((item, i) => <div className="interest" key={item}><span>0{i+1}</span>{item}<ArrowRight size={15}/></div>)}</article></div>
+
+      <section id="about" className="section">
+        <p className="eyebrow">ABOUT ME</p>
+        <h2>My Background, Interests &amp; Learning Goal</h2>
+        <div className="aboutGrid">
+          <div className="card">
+            <h3>Who I Am</h3>
+            <p>
+              I am a college student who is interested in technology and programming.
+              I enjoy learning new things, exploring different programming skills, and
+              working on projects that help me improve. I may still be learning, but I
+              am hardworking, willing to learn, and always trying to become better at
+              what I do.
+            </p>
+          </div>
+          <div className="card">
+            <h3>My Interests</h3>
+            <ul>{interests.map((item) => <li key={item}>{item}</li>)}</ul>
+          </div>
+          <div className="card goal">
+            <h3>My Learning Goal</h3>
+            <p>
+              My goal is to strengthen my programming and technical skills through
+              practice and real projects, while becoming a confident and capable IT
+              professional.
+            </p>
+          </div>
+        </div>
       </section>
-      <section className="section pale-bg" id="education"><div className="wrap"><p className="eyebrow">02 / EDUCATION</p><h2 className="section-title">My college <span>journey</span></h2><article className="education panel"><GraduationCap size={34}/><div><p className="eyebrow">CURRENTLY STUDYING</p><h3>Bachelor of Science in Information Technology</h3><h4>Nueva Vizcaya State University (NVSU)</h4><p className="muted">Major: Network Design Management (NDM) · Third Year College</p><p className="muted">My studies help me build a foundation in programming, computer networking, databases, and system development.</p></div></article></div></section>
-      <section className="section wrap" id="projects"><p className="eyebrow">03 / PROJECTS</p><h2 className="section-title">Work in <span>progress</span></h2><div className="two-col"><article className="project panel"><div className="project-visual">RR<span>PORTFOLIO WEBSITE</span></div><p className="eyebrow">NEXT.JS · CSS</p><h3>Personal Portfolio Website</h3><p className="muted">A responsive personal website that introduces me, shares my education, and highlights my interests in a clean blue design.</p></article><article className="project panel"><div className="project-visual visual-light">01<span>SYSTEM DEVELOPMENT</span></div><p className="eyebrow">IN PROGRESS</p><h3>System Development Project</h3><p className="muted">An ongoing project where I practice planning features and applying programming concepts to a functional system.</p></article></div><p className="muted center">More projects will be added as I continue learning and building.</p></section>
-      <section className="section pale-bg" id="contact"><div className="wrap"><p className="eyebrow">04 / CONTACT</p><h2 className="section-title">Let’s start a <span>conversation.</span></h2><p className="muted">Have a question, an idea, or want to connect? Feel free to reach out.</p><div className="contact panel"><a href="mailto:rarosrachelle1106@gmail.com"><Mail size={21}/><span><small>EMAIL</small><b>rarosrachelle1106@gmail.com</b></span><ArrowRight size={16}/></a><a href="tel:09358126709"><Phone size={21}/><span><small>PHONE</small><b>09358126709</b></span><ArrowRight size={16}/></a></div></div></section>
-      <footer className="footer wrap"><a className="brand" href="#home">RR <span>Rachelle Raros.</span></a><span>Designed with Next.js and CSS.</span><a href="#home">BACK TO TOP ↑</a></footer>
+
+      <section id="education" className="section tinted">
+        <p className="eyebrow">EDUCATION</p>
+        <h2>My College Journey</h2>
+        <div className="educationCard">
+          <div className="schoolBadge">NVSU</div>
+          <div>
+            <h3>Nueva Vizcaya State University</h3>
+            <p className="degree">Bachelor of Science in Information Technology</p>
+            <p><strong>Major:</strong> Network and Data Management (NDM)</p>
+            <p><strong>Section:</strong> 3A</p>
+            <p className="muted">
+              I am currently a third-year college student learning about programming,
+              networking, database management, and other areas of Information Technology.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="section">
+        <p className="eyebrow">PROJECTS</p>
+        <h2>My Work</h2>
+        <div className="projectCard">
+          <div className="projectTop">
+            <span className="status">IN PROGRESS</span>
+            <span className="number">01</span>
+          </div>
+          <h3>Computer Registration System</h3>
+          <p>
+            A simple computer registration system designed for a computer laboratory.
+            It allows students to register using their Student ID and record their
+            computer usage, including time-in and time-out.
+          </p>
+          <p>
+            The system helps keep track of which students are using each computer and
+            makes laboratory monitoring more organized.
+          </p>
+          <div className="tags"><span>System Development</span><span>In Progress</span><span>IT Project</span></div>
+        </div>
+      </section>
+
+      <section id="contact" className="section contact">
+        <p className="eyebrow">CONTACT</p>
+        <h2>Let&apos;s Connect</h2>
+        <p>If you would like to connect with me, you can reach me through:</p>
+        <div className="contactGrid">
+          <a href="mailto:fuertesjharyll15@gmail.com" className="contactCard">
+            <small>EMAIL</small><strong>fuertesjharyll15@gmail.com</strong>
+          </a>
+          <a href="tel:09072991650" className="contactCard">
+            <small>PHONE</small><strong>09072991650</strong>
+          </a>
+        </div>
+      </section>
+
+      <footer>© 2026 Jharyll • Built with Next.js &amp; CSS</footer>
     </main>
   );
 }
