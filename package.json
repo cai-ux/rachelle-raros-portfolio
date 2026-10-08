@@ -1,25 +1,8 @@
 {
-  "name": "rachelle-raros-portfolio",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "15.5.3",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "lucide-react": "^0.468.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.3",
-    "typescript": "^5"
-  }
+  "name":"jharyll-programmer-profile",
+  "version":"1.0.0",
+  "private":true,
+  "scripts":{"dev":"next dev","build":"next build","start":"next start","lint":"eslint"},
+  "dependencies":{"next":"15.5.27","react":"19.1.2","react-dom":"19.1.2"},
+  "devDependencies":{"eslint":"^9","eslint-config-next":"15.5.27"}
 }
